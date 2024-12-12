@@ -9,6 +9,7 @@ class UpdateRecipeScreen extends StatefulWidget {
   const UpdateRecipeScreen({required this.recipe, super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _UpdateRecipeScreenState createState() => _UpdateRecipeScreenState();
 }
 
@@ -24,6 +25,7 @@ class _UpdateRecipeScreenState extends State<UpdateRecipeScreen> {
     super.initState();
     name = widget.recipe.name;
     description = widget.recipe.description;
+    ingredients = widget.recipe.ingredients;
     instructions = widget.recipe.instructions;
   }
 
@@ -70,6 +72,7 @@ class _UpdateRecipeScreenState extends State<UpdateRecipeScreen> {
                       instructions: instructions,
                     );
                     context.read<RecipeService>().updateRecipe(updatedRecipe).then((_) {
+                      // ignore: use_build_context_synchronously
                       Navigator.pop(context);
                     });
                   }

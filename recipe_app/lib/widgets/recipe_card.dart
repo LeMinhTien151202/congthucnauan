@@ -7,7 +7,7 @@ class RecipeCard extends StatelessWidget {
   final VoidCallback onDelete;
   final VoidCallback onTap; // Sự kiện cho bấm vào để xem chi tiết món ăn
 
-  RecipeCard({
+  const RecipeCard({super.key, 
     required this.recipe,
     required this.onUpdate,
     required this.onDelete,

@@ -17,10 +17,10 @@ class RecipeDetailScreen extends StatelessWidget {
           children: [
             const Text("Description:", style: TextStyle(fontWeight: FontWeight.bold)),
             Text(recipe.description),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             const Text("Ingredients:", style: TextStyle(fontWeight: FontWeight.bold)),
-            ...recipe.ingredients.map((ing) => Text("- $ing")).toList(),
-            SizedBox(height: 16),
+            ...recipe.ingredients.map((ing) => Text("- $ing")),
+            const SizedBox(height: 16),
             const Text("Instructions:", style: TextStyle(fontWeight: FontWeight.bold)),
             Text(recipe.instructions),
           ],

@@ -11,7 +11,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => RecipeService(), // Cung cấp RecipeService cho cây widget
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
